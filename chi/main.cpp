@@ -3,7 +3,7 @@
 #include <chi/GraphModule.hpp>
 #include <chi/LangModule.hpp>
 #include <chi/NodeType.hpp>
-#include <chi/Result.hpp>
+#include <chi/Support/Result.hpp>
 
 #include <boost/filesystem.hpp>
 #include <boost/program_options.hpp>
@@ -19,17 +19,33 @@ extern int get(const std::vector<std::string>& opts);
 extern int run(const std::vector<std::string>& opts, const char* argv0);
 extern int interpret(const std::vector<std::string>& opts, const char* argv0);
 
+const char* helpString =
+    "Usage: chi [ -C <path> ] <command> <command arguments>\n"
+    "\n"
+    "Available commands:\n"
+    "\n"
+    "compile      Compile a chigraph module to an LLVM module\n"
+    "run          Run a chigraph module\n"
+    "interpret    Interpret LLVM IR (similar to lli)\n"
+    "get          Fetch modules from the internet\n"
+    "\n"
+    "Use chi <command> --help to get usage for a command";
+
 using namespace chi;
 
 int main(int argc, char** argv) {
 	namespace po = boost::program_options;
 
-	po::options_description general(
-	    "chig: Chigraph command line. Usage: chig <command> <arguments>", 50);
+	po::options_description general("chi: Chigraph command line. Usage: chi <command> <arguments>",
+	                                50);
 
-	general.add_options()("help,h", "Produce Help Message")("command", po::value<std::string>(),
-	                                                        "which command")(
-	    "subargs", po::value<std::vector<std::string>>(), "arguments for command");
+	// clang-format off
+	general.add_options()
+		("change-dir,C", po::value<std::string>(), "Directory to change to first")
+		("command", po::value<std::string>(), "which command")
+		("subargs", po::value<std::vector<std::string>>(), "arguments for command")
+		;
+	// clang-format on
 
 	po::positional_options_description pos;
 	pos.add("command", 1).add("subargs", -1);
@@ -46,15 +62,10 @@ int main(int argc, char** argv) {
 
 	po::notify(vm);
 
-	// see help
-	if (vm.count("help") != 0u) {
-		std::cout << general << std::endl;
-		return 0;
-	}
+	if (vm.count("C") == 1) { boost::filesystem::current_path(vm["C"].as<std::string>()); }
 
 	if (vm.count("command") != 1) {
-		std::cout << general << std::endl;
-		// TODO: cout commands
+		std::cout << helpString << std::endl;
 		return 1;
 	}
 

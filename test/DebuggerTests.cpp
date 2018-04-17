@@ -1,11 +1,11 @@
 #include <catch.hpp>
 
 #include <chi/Context.hpp>
-#include <chi/Debugger.hpp>
+#include <chi/Debugger/Debugger.hpp>
 #include <chi/GraphModule.hpp>
 #include <chi/NodeInstance.hpp>
 #include <chi/NodeType.hpp>
-#include <chi/Result.hpp>
+#include <chi/Support/Result.hpp>
 
 #include <llvm/Support/FileSystem.h>
 
@@ -32,7 +32,7 @@ TEST_CASE("Debugger", "") {
 	GraphModule* gMod;
 	{
 		ChiModule* cMod;
-		res += ctx.loadModule("intermodule/main", LoadSettings::Default, &cMod);
+		res += ctx.loadModule("intermodule/main", &cMod);
 		gMod = static_cast<GraphModule*>(cMod);
 	}
 	REQUIRE(res.dump() == "");
@@ -61,19 +61,21 @@ TEST_CASE("Debugger", "") {
 	auto exitNode = putsNode->outputExecConnections[0].first;
 
 	// make a debugger
-	boost::filesystem::path chigPath =
+	boost::filesystem::path chiPath =
 	    boost::filesystem::path(llvm::sys::fs::getMainExecutable(nullptr, nullptr)).parent_path() /
 	    "chi";
 #ifdef _WIN32
-	chigPath.replace_extension(boost::filesystem::path(".exe"));
+	chiPath.replace_extension(boost::filesystem::path(".exe"));
 #endif
+	REQUIRE(fs::is_regular_file(chiPath));
 
-	Debugger dbg{chigPath.string().c_str(), *gMod};
+	Debugger dbg{chiPath.string().c_str(), *gMod};
 
 	dbg.setBreakpoint(*putsNode);
 	dbg.setBreakpoint(*exitNode);
 
 	res = dbg.start();
+	std::cout << "Started" << std::endl;
 	REQUIRE(res.dump() == "");
 
 	auto          listener = dbg.lldbDebugger().GetListener();
@@ -81,19 +83,23 @@ TEST_CASE("Debugger", "") {
 	while (true) {
 		listener.WaitForEvent(3, ev);
 		if (ev.IsValid())
-			std::cout << "EVENT" << ev.GetDataFlavor() << ", " << ev.GetBroadcasterClass() << ", "
+			std::cout << "EVENT: " << ev.GetDataFlavor() << ", " << ev.GetBroadcasterClass() << ", "
 			          << lldb::SBProcess::GetStateFromEvent(ev) << std::endl;
 		std::cout.flush();
 
-		if (lldb::SBProcess::GetStateFromEvent(ev) == lldb::eStateStopped) break;
+		auto state = lldb::SBProcess::GetStateFromEvent(ev);
+		REQUIRE(state != lldb::eStateExited);
+		if (state == lldb::eStateStopped) break;
+
 	}
 
 	dbg.processContinue();
+	std::cout << "Continued for the first time" << std::endl;
 
 	while (true) {
 		listener.WaitForEvent(3, ev);
 		if (ev.IsValid())
-			std::cout << "EVENT" << ev.GetDataFlavor() << ", " << ev.GetBroadcasterClass() << ", "
+			std::cout << "EVENT: " << ev.GetDataFlavor() << ", " << ev.GetBroadcasterClass() << ", "
 			          << lldb::SBProcess::GetStateFromEvent(ev) << std::endl;
 		std::cout.flush();
 

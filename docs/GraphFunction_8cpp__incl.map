@@ -1,16 +1,18 @@
-<map id="libchigraph/src/GraphFunction.cpp" name="libchigraph/src/GraphFunction.cpp">
-<area shape="rect" id="node2" href="$GraphFunction_8hpp.html" title="Declares the GraphFunction class. " alt="" coords="787,169,940,196"/>
-<area shape="rect" id="node12" href="$Context_8hpp.html" title="Defines the Context class and related functions. " alt="" coords="1005,169,1119,196"/>
-<area shape="rect" id="node18" href="$DataType_8hpp.html" title="Defines the DataType class. " alt="" coords="1567,87,1691,114"/>
-<area shape="rect" id="node20" href="$FunctionValidator_8hpp.html" title="Defines functions for validating GraphFunction objects. " alt="" coords="1632,169,1801,196"/>
-<area shape="rect" id="node21" href="$GraphModule_8hpp.html" title="Defines the GraphModule class. " alt="" coords="1876,87,2021,114"/>
-<area shape="rect" id="node27" href="$NameMangler_8hpp.html" title="Definitions for mangling functions. " alt="" coords="1395,87,1543,114"/>
-<area shape="rect" id="node29" href="$NodeInstance_8hpp.html" title="Defines the NodeInstance class and related functions. " alt="" coords="2257,169,2405,196"/>
-<area shape="rect" id="node33" href="$NodeType_8hpp.html" title="Defines the NodeType class. " alt="" coords="1272,169,1399,196"/>
-<area shape="rect" id="node35" href="$Result_8hpp.html" title="Defines the Result class and related functions. " alt="" coords="1143,169,1248,196"/>
-<area shape="rect" id="node3" href="$Fwd_8hpp.html" title="Forward declares all the chigraph data types. " alt="" coords="1629,251,1721,278"/>
-<area shape="rect" id="node4" href="$HashUuid_8hpp_source.html" title="chi/HashUuid.hpp" alt="" coords="296,251,420,278"/>
-<area shape="rect" id="node14" href="$Flags_8hpp_source.html" title="chi/Flags.hpp" alt="" coords="496,251,596,278"/>
-<area shape="rect" id="node22" href="$ChiModule_8hpp.html" title="Defines the ChiModule class. " alt="" coords="1825,169,1955,196"/>
-<area shape="rect" id="node23" href="$HashFilesystemPath_8hpp_source.html" title="chi/HashFilesystemPath.hpp" alt="" coords="1746,251,1935,278"/>
+<map id="lib/core/src/GraphFunction.cpp" name="lib/core/src/GraphFunction.cpp">
+<area shape="rect" id="node2" href="$GraphFunction_8hpp.html" title="Declares the GraphFunction class. " alt="" coords="203,177,357,203"/>
+<area shape="rect" id="node13" href="$Context_8hpp.html" title="Defines the Context class and related functions. " alt="" coords="810,87,923,114"/>
+<area shape="rect" id="node22" href="$DataType_8hpp.html" title="Defines the DataType class. " alt="" coords="2238,87,2362,114"/>
+<area shape="rect" id="node24" href="$FunctionValidator_8hpp.html" title="Defines functions for validating GraphFunction objects. " alt="" coords="1587,177,1757,203"/>
+<area shape="rect" id="node25" href="$GraphModule_8hpp.html" title="Defines the GraphModule class. " alt="" coords="1858,87,2003,114"/>
+<area shape="rect" id="node30" href="$NameMangler_8hpp.html" title="Definitions for mangling functions. " alt="" coords="2066,87,2214,114"/>
+<area shape="rect" id="node32" href="$NodeInstance_8hpp.html" title="Defines the NodeInstance class and related functions. " alt="" coords="2338,177,2486,203"/>
+<area shape="rect" id="node36" href="$NodeType_8hpp.html" title="Defines the NodeType class. " alt="" coords="1177,177,1303,203"/>
+<area shape="rect" id="node37" href="$Result_8hpp.html" title="Defines the Result class and related functions. " alt="" coords="1419,87,1573,114"/>
+<area shape="rect" id="node3" href="$core_2include_2chi_2Fwd_8hpp.html" title="Forward declares all the chigraph data types. " alt="" coords="1530,266,1622,293"/>
+<area shape="rect" id="node5" href="$HashUuid_8hpp.html" title="chi/Support/HashUuid.hpp" alt="" coords="412,266,585,293"/>
+<area shape="rect" id="node4" href="$support_2include_2chi_2Support_2Fwd_8hpp.html" title="chi/Support/Fwd.hpp" alt="" coords="1505,348,1647,375"/>
+<area shape="rect" id="node15" href="$ModuleCache_8hpp.html" title="chi/ModuleCache.hpp" alt="" coords="1005,177,1152,203"/>
+<area shape="rect" id="node18" href="$Flags_8hpp.html" title="chi/Support/Flags.hpp" alt="" coords="5,177,155,203"/>
+<area shape="rect" id="node26" href="$ChiModule_8hpp.html" title="Defines the ChiModule class. " alt="" coords="1975,177,2105,203"/>
+<area shape="rect" id="node27" href="$HashFilesystemPath_8hpp.html" title="chi/Support/HashFilesystem\lPath.hpp" alt="" coords="1780,259,1967,300"/>
 </map>

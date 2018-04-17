@@ -4,7 +4,7 @@
 #include <chi/DataType.hpp>
 #include <chi/LangModule.hpp>
 #include <chi/NodeType.hpp>
-#include <chi/Result.hpp>
+#include <chi/Support/Result.hpp>
 
 #include <llvm/IR/DerivedTypes.h>
 
@@ -118,10 +118,7 @@ TEST_CASE("Contexts can be created and modules can be added to them", "[Context]
 			}
 		}
 
-		THEN("Load module should fail") {
-			REQUIRE(!c.loadModule("github.com/hello"));
-			REQUIRE(!c.loadModule(""));
-		}
+		THEN("Load module should fail") { REQUIRE(!c.loadModule("github.com/hello")); }
 	}
 
 	GIVEN("A context constructed with a workspace") {}

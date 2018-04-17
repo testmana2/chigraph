@@ -1,0 +1,8 @@
+<map id="chi::Subprocess::setArguments" name="chi::Subprocess::setArguments">
+<area shape="rect" id="node2" href="$structchi_1_1Subprocess.html#a38101f1406d62b1dc386072f576b990f" title="Set the arguments for the program with a begin and end iterator. " alt="" coords="259,31,464,57"/>
+<area shape="rect" id="node3" href="$structchi_1_1Subprocess.html#a9b2f4ecd9a0239232deaf3ff46c48bf0" title="Check if the child has started (start() has been called) " alt="" coords="512,31,676,57"/>
+<area shape="rect" id="node4" href="$structchi_1_1Subprocess.html#a62114d525126e682028af5a906f771a6" title="Pushes data to the stdin stream of the child process. " alt="" coords="724,5,923,32"/>
+<area shape="rect" id="node7" href="$structchi_1_1Subprocess.html#a45fd483d620609100cdd6065ce4751f2" title="Close the STDIN stream (send an EOF) " alt="" coords="730,56,917,83"/>
+<area shape="rect" id="node5" href="$structchi_1_1Result.html#a59ef40f4a327cbdea263d6e4b5af2ad8" title="Add a entry to the result, either a warning or an error. " alt="" coords="971,31,1115,57"/>
+<area shape="rect" id="node6" href="$structchi_1_1Result.html#aa078d3cb3dfb2fb63e81b71acea036e0" title="Get the JSON associated with the context that&#39;s been added. " alt="" coords="1163,31,1325,57"/>
+</map>

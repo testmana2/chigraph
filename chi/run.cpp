@@ -7,8 +7,8 @@
 #include <chi/GraphModule.hpp>
 #include <chi/LangModule.hpp>
 #include <chi/NodeType.hpp>
-#include <chi/Result.hpp>
-#include <chi/json.hpp>
+#include <chi/Support/Result.hpp>
+#include <chi/Support/json.hpp>
 
 #include <boost/filesystem.hpp>
 #include <boost/program_options.hpp>
@@ -32,9 +32,13 @@ using namespace chi;
 
 int run(const std::vector<std::string>& opts, const char* argv0) {
 	po::options_description run_opts;
-	run_opts.add_options()("input-file", po::value<std::string>(),
-	                       "The input file, - for stdin. Should be a chig module")(
-	    "subargs", po::value<std::vector<std::string>>(), "Arguments to call main with");
+
+	// clang-format off
+	run_opts.add_options()
+		("input-file", po::value<std::string>(), "The input file, - for stdin. Should be a chi module")
+		("subargs", po::value<std::vector<std::string>>(), "Arguments to call main with")
+		;
+	// clang-format on
 
 	po::positional_options_description pos;
 	pos.add("input-file", 1).add("subargs", -1);
@@ -78,7 +82,7 @@ int run(const std::vector<std::string>& opts, const char* argv0) {
 		fs::path moduleName = fs::relative(fs::current_path(), c.workspacePath() / "src") / inpath;
 
 		ChiModule* cMod;
-		res += c.loadModule(moduleName.string(), LoadSettings::Default, &cMod);
+		res += c.loadModule(moduleName.string(), &cMod);
 		if (!res) {
 			std::cerr << res.dump();
 			return 1;
@@ -93,9 +97,12 @@ int run(const std::vector<std::string>& opts, const char* argv0) {
 	}
 
 	std::unique_ptr<llvm::Module> llmod;
-	res += c.compileModule(jmod->fullName(), &llmod);
+	res += c.compileModule(jmod->fullName(), CompileSettings::Default, &llmod);
 
-	if (!res) { std::cerr << "Error compiling module: " << res << std::endl; return 1; }
+	if (!res) {
+		std::cerr << "Error compiling module: " << res << std::endl;
+		return 1;
+	}
 
 	// run it!
 

@@ -1,10 +1,18 @@
 var searchData=
 [
-  ['operator_20bool',['operator bool',['../structchi_1_1Result.html#a26406ce67145a4e7893018ccbf50dc89',1,'chi::Result']]],
-  ['operator_21',['operator!',['../structchi_1_1Result.html#ac4c9a2e6f79dbd1f49116370cfc96513',1,'chi::Result']]],
-  ['operator_21_3d',['operator!=',['../structchi_1_1DataType.html#ad14e85637a15b7f77cbc51d7139ebfd1',1,'chi::DataType::operator!=()'],['../structchi_1_1NamedDataType.html#a01bc75acad89fce92cb5c93323ff4c2d',1,'chi::NamedDataType::operator!=()']]],
-  ['operator_2b',['operator+',['../structchi_1_1Result.html#a8fb4cc68d78f0a0068c0ddd282875eee',1,'chi::Result']]],
-  ['operator_2b_3d',['operator+=',['../structchi_1_1Result.html#aa3dbb473ec8607456c13be950e739827',1,'chi::Result']]],
-  ['operator_3c_3c',['operator&lt;&lt;',['../structchi_1_1Result.html#a3a1caa60d79ed3cd997da1559bddd278',1,'chi::Result']]],
-  ['operator_3d_3d',['operator==',['../structchi_1_1DataType.html#a28f2089d4e0ce03e737d2a82e473c927',1,'chi::DataType::operator==()'],['../structchi_1_1NamedDataType.html#a080914269173bb83b2ebf0ac622b66a0',1,'chi::NamedDataType::operator==()']]]
+  ['name',['name',['../structchi_1_1GraphFunction.html#a89069f6e08f71cfbafb245ea16c8d69f',1,'chi::GraphFunction::name()'],['../structchi_1_1GraphStruct.html#ad25ddcbdf75436b9a0f76720d34257d4',1,'chi::GraphStruct::name()'],['../structchi_1_1NodeType.html#ad301375a4b84ddc699337e285ee78cc3',1,'chi::NodeType::name()']]],
+  ['nameddatatype',['NamedDataType',['../structchi_1_1NamedDataType.html#a2cf49481c5d9ac22f108bfeac56e2990',1,'chi::NamedDataType']]],
+  ['newgraphmodule',['newGraphModule',['../structchi_1_1Context.html#a906c9187e13e2194a3f68d48973529f6',1,'chi::Context']]],
+  ['node',['node',['../structchi_1_1NodeCompiler.html#a8a595537ffd4b3116059d59e3fd61f8b',1,'chi::NodeCompiler']]],
+  ['nodebyid',['nodeByID',['../structchi_1_1GraphFunction.html#acb3281f6b313b7070efb0ee84b937523',1,'chi::GraphFunction']]],
+  ['nodecompiler',['nodeCompiler',['../structchi_1_1FunctionCompiler.html#a85f29ea79e8fab1c963f096be468a1a5',1,'chi::FunctionCompiler::nodeCompiler()'],['../structchi_1_1NodeCompiler.html#a60d81f093668468eb14be0e18e319ed5',1,'chi::NodeCompiler::NodeCompiler(FunctionCompiler &amp;functionCompiler, NodeInstance &amp;inst)'],['../structchi_1_1NodeCompiler.html#a9b510fa959c6c378ac084fbec702beb3',1,'chi::NodeCompiler::NodeCompiler(NodeCompiler &amp;&amp;)=default']]],
+  ['nodefromframe',['nodeFromFrame',['../classchi_1_1Debugger.html#ae142902fa85248f40cbeea7199c86ad9',1,'chi::Debugger']]],
+  ['nodeinstance',['NodeInstance',['../structchi_1_1NodeInstance.html#ac662b0ce416745792a336e9735c8b09d',1,'chi::NodeInstance::NodeInstance(GraphFunction *func, std::unique_ptr&lt; NodeType &gt; nodeType, float posX, float posY, boost::uuids::uuid nodeID=boost::uuids::random_generator()())'],['../structchi_1_1NodeInstance.html#a2217cb2480f31aea604b2a61d4098eea',1,'chi::NodeInstance::NodeInstance(NodeInstance &amp;&amp;)=default'],['../structchi_1_1NodeInstance.html#addf825d934542d46f8721e2516928776',1,'chi::NodeInstance::NodeInstance(const NodeInstance &amp;other, boost::uuids::uuid id=boost::uuids::random_generator()())'],['../structchi_1_1NodeType.html#adf8b95a4dc2a7a5253a71624a5d59ab3',1,'chi::NodeType::nodeInstance()']]],
+  ['nodelinenumber',['nodeLineNumber',['../structchi_1_1FunctionCompiler.html#ad3a3ebb8527c7d061f3a33075b7a2d18',1,'chi::FunctionCompiler']]],
+  ['nodes',['nodes',['../structchi_1_1GraphFunction.html#aa5985d96d7564d7ee7f240fdb02b41a6',1,'chi::GraphFunction::nodes()'],['../structchi_1_1GraphFunction.html#a900c0b670ad04a76b6add803ade7ae0d',1,'chi::GraphFunction::nodes() const']]],
+  ['nodeswithtype',['nodesWithType',['../structchi_1_1GraphFunction.html#a56ba667341ecc6fce1e290cce6aedf53',1,'chi::GraphFunction']]],
+  ['nodetype',['NodeType',['../structchi_1_1NodeType.html#adad3e5e61bf72247980f1faac1407168',1,'chi::NodeType']]],
+  ['nodetypefrommodule',['nodeTypeFromModule',['../structchi_1_1Context.html#a28706d36f049088c98cd726921512668',1,'chi::Context']]],
+  ['nodetypefromname',['nodeTypeFromName',['../structchi_1_1ChiModule.html#afee9e0601769e3c88bc481186e260d63',1,'chi::ChiModule::nodeTypeFromName()'],['../structchi_1_1GraphModule.html#a133c0595e0bb888f958e9769838f6c0c',1,'chi::GraphModule::nodeTypeFromName()'],['../structchi_1_1LangModule.html#a7d02bd6785e656a90820c6f0d0ffe3d6',1,'chi::LangModule::nodeTypeFromName()']]],
+  ['nodetypenames',['nodeTypeNames',['../structchi_1_1ChiModule.html#ad47cf06593a7af38d7639dc6413c7ad0',1,'chi::ChiModule::nodeTypeNames()'],['../structchi_1_1GraphModule.html#a53a1a284ab878783e74a957bb3b711b3',1,'chi::GraphModule::nodeTypeNames()'],['../structchi_1_1LangModule.html#ac9dd298b9bded983c59ba4110bac8698',1,'chi::LangModule::nodeTypeNames()']]]
 ];

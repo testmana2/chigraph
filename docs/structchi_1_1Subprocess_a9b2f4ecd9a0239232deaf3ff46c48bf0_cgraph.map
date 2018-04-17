@@ -1,0 +1,6 @@
+<map id="chi::Subprocess::started" name="chi::Subprocess::started">
+<area shape="rect" id="node2" href="$structchi_1_1Subprocess.html#a45fd483d620609100cdd6065ce4751f2" title="Close the STDIN stream (send an EOF) " alt="" coords="223,5,410,32"/>
+<area shape="rect" id="node5" href="$structchi_1_1Subprocess.html#a62114d525126e682028af5a906f771a6" title="Pushes data to the stdin stream of the child process. " alt="" coords="217,56,416,83"/>
+<area shape="rect" id="node3" href="$structchi_1_1Result.html#a59ef40f4a327cbdea263d6e4b5af2ad8" title="Add a entry to the result, either a warning or an error. " alt="" coords="464,31,608,57"/>
+<area shape="rect" id="node4" href="$structchi_1_1Result.html#aa078d3cb3dfb2fb63e81b71acea036e0" title="Get the JSON associated with the context that&#39;s been added. " alt="" coords="656,31,819,57"/>
+</map>

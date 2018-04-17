@@ -3,7 +3,7 @@
 #include <chi/Context.hpp>
 #include <chi/GraphModule.hpp>
 #include <chi/GraphStruct.hpp>
-#include <chi/Result.hpp>
+#include <chi/Support/Result.hpp>
 
 using namespace chi;
 
@@ -67,7 +67,7 @@ TEST_CASE("GraphModuleTest", "[module]") {
 			assertStructRemoved();
 		}
 		WHEN("We remove that struct using the other method") {
-			gMod->removeStruct(str);
+			gMod->removeStruct(*str);
 
 			assertStructRemoved();
 		}

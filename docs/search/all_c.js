@@ -1,12 +1,13 @@
 var searchData=
 [
-  ['operator_20bool',['operator bool',['../structchi_1_1Result.html#a26406ce67145a4e7893018ccbf50dc89',1,'chi::Result']]],
-  ['operator_21',['operator!',['../structchi_1_1Result.html#ac4c9a2e6f79dbd1f49116370cfc96513',1,'chi::Result']]],
-  ['operator_21_3d',['operator!=',['../structchi_1_1DataType.html#ad14e85637a15b7f77cbc51d7139ebfd1',1,'chi::DataType::operator!=()'],['../structchi_1_1NamedDataType.html#a01bc75acad89fce92cb5c93323ff4c2d',1,'chi::NamedDataType::operator!=()']]],
-  ['operator_2b',['operator+',['../structchi_1_1Result.html#a8fb4cc68d78f0a0068c0ddd282875eee',1,'chi::Result']]],
-  ['operator_2b_3d',['operator+=',['../structchi_1_1Result.html#aa3dbb473ec8607456c13be950e739827',1,'chi::Result']]],
-  ['operator_3c_3c',['operator&lt;&lt;',['../structchi_1_1Result.html#a3a1caa60d79ed3cd997da1559bddd278',1,'chi::Result']]],
-  ['operator_3d_3d',['operator==',['../structchi_1_1DataType.html#a28f2089d4e0ce03e737d2a82e473c927',1,'chi::DataType::operator==()'],['../structchi_1_1NamedDataType.html#a080914269173bb83b2ebf0ac622b66a0',1,'chi::NamedDataType::operator==()']]],
-  ['outputdataconnections',['outputDataConnections',['../structchi_1_1NodeInstance.html#a7c07a36d22409a950ce18ab7eeae00f6',1,'chi::NodeInstance']]],
-  ['outputexecconnections',['outputExecConnections',['../structchi_1_1NodeInstance.html#ae15567fb9911109701a9d221b58494db',1,'chi::NodeInstance']]]
+  ['makeconverter',['makeConverter',['../structchi_1_1NodeType.html#a7d87ad6f9289fbbf76d7ef13498e78d1',1,'chi::NodeType']]],
+  ['makepure',['makePure',['../structchi_1_1NodeType.html#a77693a4c560da85835a2bd666f0bc39d',1,'chi::NodeType']]],
+  ['manglefunctionname',['mangleFunctionName',['../namespacechi.html#a44456c5ad1624ffdc805eb161eb948a1',1,'chi']]],
+  ['modifytype',['modifyType',['../structchi_1_1GraphStruct.html#a89d3ea5e72ed6e7d8380fb82fa5eb521',1,'chi::GraphStruct']]],
+  ['module',['module',['../structchi_1_1DataType.html#a41a23985893c9c15c49ed8c9eec9ea9c',1,'chi::DataType::module()'],['../structchi_1_1FunctionCompiler.html#a5be5f3d00d513273a40082140b514922',1,'chi::FunctionCompiler::module()'],['../structchi_1_1GraphFunction.html#a0564412e260698bdb3872d3d12dfc3bc',1,'chi::GraphFunction::module()'],['../structchi_1_1GraphStruct.html#a82a1da52a4bf23e1e7fef4d7228603b1',1,'chi::GraphStruct::module()'],['../structchi_1_1NodeInstance.html#a72d113cfee45f4017adf28b034c6f215',1,'chi::NodeInstance::module()'],['../structchi_1_1NodeType.html#a4fd551737d6b3bb4d6609f1ee8e054aa',1,'chi::NodeType::module()'],['../classchi_1_1Debugger.html#aeec97926d904907c3f2513a822a31696',1,'chi::Debugger::module()']]],
+  ['modulebyfullname',['moduleByFullName',['../structchi_1_1Context.html#a8628a178e0a8a944065f2605d01a36d5',1,'chi::Context']]],
+  ['modulecache',['ModuleCache',['../structchi_1_1ModuleCache.html',1,'chi::ModuleCache'],['../structchi_1_1Context.html#afdf2d810191484be60d79abb03c5f7a7',1,'chi::Context::moduleCache() const'],['../structchi_1_1Context.html#a36c12b871ae11ae59a5ec1f2f2842ec7',1,'chi::Context::moduleCache()'],['../structchi_1_1ModuleCache.html#a471e0c0822bccdd1fa5ed1bc34f7d641',1,'chi::ModuleCache::ModuleCache()']]],
+  ['modulecache_2ehpp',['ModuleCache.hpp',['../ModuleCache_8hpp.html',1,'']]],
+  ['modules',['modules',['../structchi_1_1Context.html#acd60f2fe31d69d0c37652fb47fcf7b60',1,'chi::Context']]],
+  ['msuccess',['mSuccess',['../structchi_1_1Result.html#af020ebd48f50571295922b6235cf26bf',1,'chi::Result']]]
 ];

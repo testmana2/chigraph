@@ -4,7 +4,8 @@
 #include <chi/DataType.hpp>
 #include <chi/LangModule.hpp>
 #include <chi/NodeType.hpp>
-#include <chi/Result.hpp>
+#include <chi/Support/Result.hpp>
+#include <chi/Fetcher/Fetcher.hpp>
 
 #include <llvm/IR/DerivedTypes.h>
 
@@ -20,11 +21,8 @@ TEST_CASE("Contexts can fetch remote modules", "[Context]") {
 	// create the .chigraphworkspace file
 	{ fs::ofstream stream{workspaceDir / ".chigraphworkspace"}; }
 
-	// initialize the context
-	Context ctx{workspaceDir};
-
-	auto res = ctx.fetchModule("github.com/russelltg/hellochigraph/hello/main", true);
+	auto res = fetchModule(workspaceDir, "github.com/chigraph/hellochigraph/hello/main", true);
 	REQUIRE(res.dump() == "");
 
-	REQUIRE(fs::is_directory(workspaceDir / "src" / "github.com" / "russelltg" / "hellochigraph"));
+	REQUIRE(fs::is_directory(workspaceDir / "src" / "github.com" / "chigraph" / "hellochigraph"));
 }
